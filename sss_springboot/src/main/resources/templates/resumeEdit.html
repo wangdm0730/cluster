@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>简历详情页</title>
+</head>
+<body>
+<form method="post" action="/resume/updateResume">
+    <table border="1" width="100%">
+        <input type="hidden" name="id" th:text="${resume.id}"></input>
+        <tr>
+            <td>姓名</td>
+            <td><input type="text" name="name" th:text="${resume.name}"/></td>
+        </tr>
+        <tr>
+            <td>地址</td>
+            <td><input type="text" name="address" th:text="${resume.address}"/></td>
+        </tr>
+        <tr>
+            <td>电话</td>
+            <td><input type="text" name="phone" th:text="${resume.phone}"/></td>
+        </tr>
+    </table>
+    <input type="submit" value="提交数据"/>
+</form>
+
+</body>
+</html>
